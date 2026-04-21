@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkyCast Weather</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="hero">
+      <p class="eyebrow">Interactive Weather App</p>
+      <h1>Check weather in any city</h1>
+      <p class="subtitle">Search by city name to get live weather, local time, and a 3-day forecast.</p>
+    </header>
+
+    <section class="content">
+      <aside class="search-panel">
+        <form id="weather-form" class="search-card">
+          <label for="city-input">Enter city name</label>
+          <input id="city-input" type="text" placeholder="e.g. Mumbai, New York, Tokyo" autocomplete="off" required>
+          <button id="search-btn" type="submit">Get Weather</button>
+          <p id="status" class="status">Search for a city to load weather.</p>
+        </form>
+      </aside>
+
+      <section class="result-panel" id="result-panel">
+        <div class="empty-state" id="empty-state">
+          No weather loaded yet. Enter a city and click <strong>Get Weather</strong>.
+        </div>
+
+        <div class="weather-card hidden" id="weather-card">
+          <div class="weather-header">
+            <div>
+              <h2 id="location-name"></h2>
+              <p id="local-time" class="weather-meta"></p>
+            </div>
+            <div>
+              <p id="temperature" class="temperature"></p>
+              <p id="condition" class="conditions"></p>
+            </div>
+          </div>
+
+          <div class="metrics" id="metrics"></div>
+          <div class="forecast-grid" id="forecast-grid"></div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
